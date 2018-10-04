@@ -13,9 +13,6 @@
 		40EE38A02165D9860049317B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EE389F2165D9860049317B /* Assets.xcassets */; };
 		40EE38A32165D9860049317B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EE38A12165D9860049317B /* LaunchScreen.storyboard */; };
 		40EE38AB2165EEED0049317B /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE38AA2165EEED0049317B /* FirstTableViewCell.swift */; };
-		40EE38AD2165F11C0049317B /* Arduino Uno.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40EE38AC2165F11C0049317B /* Arduino Uno.jpg */; };
-		40EE38AF2165F12B0049317B /* Arduino Mega.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40EE38AE2165F12B0049317B /* Arduino Mega.jpg */; };
-		40EE38B12165F1370049317B /* Arduino Nano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40EE38B02165F1370049317B /* Arduino Nano.jpg */; };
 		40EE38B32165F2940049317B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE38B22165F2940049317B /* SecondViewController.swift */; };
 		40EE38B52165F5930049317B /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE38B42165F5930049317B /* Cart.swift */; };
 		40EE38B72165F59D0049317B /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE38B62165F59D0049317B /* Total.swift */; };
@@ -32,9 +29,6 @@
 		40EE38A22165D9860049317B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EE38A42165D9860049317B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40EE38AA2165EEED0049317B /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
-		40EE38AC2165F11C0049317B /* Arduino Uno.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arduino Uno.jpg"; sourceTree = "<group>"; };
-		40EE38AE2165F12B0049317B /* Arduino Mega.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arduino Mega.jpg"; sourceTree = "<group>"; };
-		40EE38B02165F1370049317B /* Arduino Nano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arduino Nano.jpg"; sourceTree = "<group>"; };
 		40EE38B22165F2940049317B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		40EE38B42165F5930049317B /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		40EE38B62165F59D0049317B /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
@@ -72,9 +66,6 @@
 		40EE38972165D9850049317B /* Tienda */ = {
 			isa = PBXGroup;
 			children = (
-				40EE38AC2165F11C0049317B /* Arduino Uno.jpg */,
-				40EE38AE2165F12B0049317B /* Arduino Mega.jpg */,
-				40EE38B02165F1370049317B /* Arduino Nano.jpg */,
 				40EE38982165D9850049317B /* AppDelegate.swift */,
 				40EE389A2165D9850049317B /* ViewController.swift */,
 				40EE389C2165D9850049317B /* Main.storyboard */,
@@ -150,11 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40EE38A32165D9860049317B /* LaunchScreen.storyboard in Resources */,
-				40EE38AD2165F11C0049317B /* Arduino Uno.jpg in Resources */,
 				40EE38A02165D9860049317B /* Assets.xcassets in Resources */,
 				40EE389E2165D9850049317B /* Main.storyboard in Resources */,
-				40EE38B12165F1370049317B /* Arduino Nano.jpg in Resources */,
-				40EE38AF2165F12B0049317B /* Arduino Mega.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
