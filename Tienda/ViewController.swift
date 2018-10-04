@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(type(of: price))
     }
     
+    
+    
     @IBOutlet weak var productTable: UITableView!
     let products = ["Arduino Uno","Arduino Nano","Arduino Mega"]
     let price = [30,20,10]

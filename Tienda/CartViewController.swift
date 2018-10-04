@@ -12,6 +12,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var FinalView: UITableView!
     var cart1 = [Cart]
     var total1 = [Total]
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cart.count
     }
@@ -25,10 +26,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    
+    //        Cantidad.text = String(sender.value)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(cart1)
         // Do any additional setup after loading the view.
     }

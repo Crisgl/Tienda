@@ -18,6 +18,10 @@ class SecondViewController: UIViewController {
  
 
     }
+    @IBAction func Aumentar(_ sender: UIStepper) {
+        Cantidad.text = String(sender.value)
+    }
+    @IBOutlet weak var Cantidad: UILabel!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var productTitle2: UILabel!
     @IBOutlet weak var productPrice2: UILabel!
