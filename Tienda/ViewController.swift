@@ -27,8 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "First", for: indexPath) as! FirstTableViewCell
         cell.productTitle.text = products[indexPath.row]
-        cell.productPrice.text = "Precio $" + "\(price[indexPath.row])"
+        cell.productPrice.text = "Precio $" + "\(price[indexPath.row])" + "MX"
         cell.image1.image = UIImage(named: products[indexPath.row] + ".jpg")
+        cell.backgroundColor = UIColor.orange
         return cell
     }
     

@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     }
     @IBAction func Aumentar(_ sender: UIStepper) {
         Cantidad.text = String(sender.value)
+        
     }
     @IBOutlet weak var Cantidad: UILabel!
     @IBOutlet weak var image2: UIImageView!
@@ -33,6 +34,7 @@ class SecondViewController: UIViewController {
         productPrice2.text = vieneDeVistaUno2
         productTitle2.text = vieneDeVistaUno
         image2.image = newImage
+        view.backgroundColor = UIColor.init(red: 10, green: 1, blue: 0, alpha: 1)
     }
 
 

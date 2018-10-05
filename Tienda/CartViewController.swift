@@ -10,9 +10,13 @@ import UIKit
 
 class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var FinalView: UITableView!
+    
+    @IBOutlet weak var Total0: UILabel!
+    
+    
     var cart1 = [Cart]
     var total1 = [Total]
-
+    var intArray = [Int]()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cart.count
     }
@@ -31,8 +35,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(cart1)
+        intArray = Total.map { Int($0)!}
+        print(intArray)
+        var sum = intArray.reduce(0, +)
+        print(sum)
+        let a:String = String(sum)
+        Total0.text = a
+
+
         // Do any additional setup after loading the view.
     }
 
@@ -53,6 +63,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.FinalView.deleteRows(at: [indexPath], with: .fade )
             completionHandler(true)
             Total.remove(at: indexPath.row)
+            self.intArray.remove(at: indexPath.row)
+            self.FinalView.reloadData()
+            var sum = self.intArray.reduce(0, +)
+            print("La suma es",sum)
+            self.Total0.reloadInputViews()
+            let a:String = String(sum)
+            self.Total0.text = a
+            self.FinalView.reloadData()
         }
         
     
