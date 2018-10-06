@@ -19,7 +19,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.intArray.removeAll()
         Cart.removeAll()
         let sum = intArray.reduce(0, +)
-        print(sum)
         let a:String = String(sum)
         self.Total0.text = "Total: $" + a
         self.FinalView.reloadData()
@@ -47,9 +46,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         intArray = Total.map { Double($0)!}
-        print(intArray)
         let sum = intArray.reduce(0, +)
-        print(sum)
         let a:String = String(sum)
         Total0.text = "Total: $" + a
         view.backgroundColor = UIColor.yellow
@@ -78,7 +75,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.intArray.remove(at: indexPath.row)
             self.FinalView.reloadData()
             let sum = self.intArray.reduce(0, +)
-            print("La suma es",sum)
             self.Total0.reloadInputViews()
             let a:String = String(sum)
             self.Total0.text = "Total: $" + a
