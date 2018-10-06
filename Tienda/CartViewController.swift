@@ -14,9 +14,19 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var Total0: UILabel!
     
     
-    var cart1 = [Cart]
-    var total1 = [Total]
-    var intArray = [Int]()
+    @IBAction func Pay(_ sender: UIButton) {
+        Total.removeAll()
+        self.intArray.removeAll()
+        Cart.removeAll()
+        let sum = intArray.reduce(0, +)
+        print(sum)
+        let a:String = String(sum)
+        self.Total0.text = "Total: $" + a
+        self.FinalView.reloadData()
+        self.Total0.reloadInputViews()
+    }
+
+    var intArray = [Double]()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cart.count
     }
@@ -24,8 +34,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cart", for: indexPath) as! CartTableViewCell
         cell.titleCart.text = Cart[indexPath.row]
-        cell.priceCart.text = Total[indexPath.row]
+        cell.priceCart.text = "$" + Total[indexPath.row]
         cell.imageCart.image = UIImage(named: Cart[indexPath.row] + ".jpg")
+        cell.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0.95, alpha: 0.5)
         return cell
     }
     
@@ -35,13 +46,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        intArray = Total.map { Int($0)!}
+        intArray = Total.map { Double($0)!}
         print(intArray)
-        var sum = intArray.reduce(0, +)
+        let sum = intArray.reduce(0, +)
         print(sum)
         let a:String = String(sum)
-        Total0.text = a
-
+        Total0.text = "Total: $" + a
+        view.backgroundColor = UIColor.yellow
+        
 
         // Do any additional setup after loading the view.
     }
@@ -69,7 +81,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("La suma es",sum)
             self.Total0.reloadInputViews()
             let a:String = String(sum)
-            self.Total0.text = a
+            self.Total0.text = "Total: $" + a
             self.FinalView.reloadData()
         }
         
@@ -81,12 +93,4 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return swipeConfiguration
         
     }
-    
-    /*func agregar(){
-        for(i=0,i<10,i++){
-            
-        }
-    }
-    */
-
 }
