@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.productTitle.text = products[indexPath.row]
         cell.productPrice.text = "$" + "\(price[indexPath.row])" 
         cell.image1.image = UIImage(named: products[indexPath.row] + ".jpg")
+        cell.backgroundColor = UIColor.orange
         return cell
         
     }
@@ -48,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             destino.vieneDeVistaUno2 = "\(price[(indexPath?.row)!])"
             destino.newImage = UIImage(named: products[(indexPath?.row)!] + ".jpg")
             destino.vieneDeVistaUno3 = descriptions[(indexPath?.row)!]
-            view.backgroundColor = UIColor.orange
+
         }
 
     }
