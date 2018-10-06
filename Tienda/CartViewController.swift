@@ -77,7 +77,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             Total.remove(at: indexPath.row)
             self.intArray.remove(at: indexPath.row)
             self.FinalView.reloadData()
-            var sum = self.intArray.reduce(0, +)
+            let sum = self.intArray.reduce(0, +)
             print("La suma es",sum)
             self.Total0.reloadInputViews()
             let a:String = String(sum)
