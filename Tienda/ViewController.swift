@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         print(type(of: price))
+        view.backgroundColor = UIColor.orange
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -33,7 +34,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.productTitle.text = products[indexPath.row]
         cell.productPrice.text = "$" + "\(price[indexPath.row])" 
         cell.image1.image = UIImage(named: products[indexPath.row] + ".jpg")
-        cell.backgroundColor = UIColor.orange
         return cell
         
     }
